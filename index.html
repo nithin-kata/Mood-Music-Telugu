@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Telugu Mood Songs</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8" />
+  <title>Mood Music Telugu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>What's your mood today?</h1>
-    <div id="moods">
-        <button data-mood="happy">😊 Happy</button>
-        <button data-mood="sad">😢 Sad</button>
-        <button data-mood="romantic">❤️ Romantic</button>
-        <button data-mood="energetic">⚡ Energetic</button>
-    </div>
-    <div id="player"></div>
-    <script src="script.js"></script>
+  <h1>What's your mood today?</h1>
+
+  <div id="moods" class="mood-bar">
+    <button data-mood="happy">😊 Happy</button>
+    <button data-mood="sad">😢 Sad</button>
+    <button data-mood="romantic">❤️ Romantic</button>
+    <button data-mood="energetic">⚡ Energetic</button>
+  </div>
+
+  <!-- Random suggestion -->
+  <div id="suggestion" class="suggestion hide">
+    <h2>Suggested song</h2>
+    <a id="suggestionLink" href="#" target="_blank" rel="noopener">
+      <img id="suggestionThumb" alt="Suggested thumbnail" />
+      <div class="title" id="suggestionTitle"></div>
+    </a>
+  </div>
+
+  <!-- Scrollable list -->
+  <div class="list-wrap">
+    <h2 id="listTitle">Pick a mood to see songs</h2>
+    <div id="songList" class="song-list"></div>
+  </div>
+
+  <footer>
+    <small>Tip: Click any thumbnail to open the song on YouTube.</small>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
