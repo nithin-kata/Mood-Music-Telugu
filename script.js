@@ -73,19 +73,19 @@ const songs = {
     { title: "Oke Oka Jeevitham — Mr. Nookayya", url: "https://www.youtube.com/watch?v=2fk1JcGVLbA" }, // :contentReference[oaicite:20]{index=20}
     // Add 4 more sad songs of your choice...
   ],
-  romantic: [
+   romantic: [
     { title: "Samajavaragamana — Ala Vaikunthapurramuloo", url: "https://www.youtube.com/watch?v=9i7b4q8f1j0" },
     { title: "Neeli Neeli Aakasam — 30 Rojullo Preminchadam Ela", url: "https://www.youtube.com/watch?v=Ue5nYI7vGzU" },
-    { title: "Inkem Inkem Inkem Kaavaale — Geetha Govindam", url: "https://www.youtube.com/watch?v=qFYj1w69OZA" }, // Repeated but valid
+    { title: "Inkem Inkem Inkem Kaavaale — Geetha Govindam", url: "https://www.youtube.com/watch?v=qFYj1w69OZA" },
     { title: "Vintunnava — Ye Maaya Chesave", url: "https://www.youtube.com/watch?v=G0oP6WzvV3w" },
     { title: "Nalo Chilipi Kala — Darling", url: "https://www.youtube.com/watch?v=1mW1qUq1VbY" },
     { title: "Sita Kalyanam — Solo Brathuke So Better", url: "https://www.youtube.com/watch?v=r8Qy7bZ8vKQ" },
     { title: "Undipova Nuvu — Savaari", url: "https://www.youtube.com/watch?v=A8s5d3H0CkA" },
     { title: "Tharali Raada — Arjun Reddy", url: "https://www.youtube.com/watch?v=6m8bJ3p2lqA" },
     { title: "Em Sandeham Ledu — O Pitta Katha", url: "https://www.youtube.com/watch?v=0z9Sg9w0Brc" },
-    // Replace or add another romantic song if needed...
-  ],
-  energetic: [
+    { title: "Srivalli — Pushpa", url: "https://www.youtube.com/watch?v=txHO7PLGE3o" }
+],
+energetic: [
     { title: "Jai Ho — Baahubali Theme Mix", url: "https://www.youtube.com/watch?v=3hS9dY0f6sU" },
     { title: "Blockbuster — Sarrainodu", url: "https://www.youtube.com/watch?v=R5e1b0z3G7Y" },
     { title: "Seeti Maar — DJ", url: "https://www.youtube.com/watch?v=NxGzC9B2-1U" },
@@ -95,8 +95,8 @@ const songs = {
     { title: "Kodakaa Koteswar Rao — Agnyaathavaasi", url: "https://www.youtube.com/watch?v=4m1O2J6p0iA" },
     { title: "Reddy Ikkada Soodu — Narappa", url: "https://www.youtube.com/watch?v=5H4QeQj2lWw" },
     { title: "Bad Boys — Saaho", url: "https://www.youtube.com/watch?v=E3s7i9u2G2g" },
-    { title: "Jigelu Rani — Rangasthalam", url: "https://www.youtube.com/watch?v=O5y7Qm7m1wU" }
-  ]
+    { title: "Jigelu Rani — Rangasthalam", url: "https://www.youtube.com/watch?v=ZcJtKxna44c" }
+]
 };
 
 // Attach event listeners
