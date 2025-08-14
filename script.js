@@ -50,30 +50,29 @@ function suggestRandom(moodKey) {
   wrap.classList.remove('hide');
 }
 
-// --- Data: 10 Telugu songs per mood with verified YouTube URLs ---
+// --- Data ---
 const songs = {
   happy: [
     { title: "Butta Bomma — Ala Vaikunthapurramuloo", url: "https://www.youtube.com/watch?v=2mDCVzruYzQ" },
     { title: "Dandalayya — Baahubali 2: The Conclusion", url: "https://www.youtube.com/watch?v=Ti7EuVUc5mg" },
-    { title: "Whattey Beauty — Bheeshma", url: "https://www.youtube.com/watch?v=E9IsULRDrWA" }, // Verified :contentReference[oaicite:7]{index=7}
-    { title: "Saami Saami — Pushpa", url: "https://www.youtube.com/watch?v=-ZAnN6groJw" }, // Verified :contentReference[oaicite:8]{index=8}
-    { title: "Mind Block — Sarileru Neekevvaru", url: "https://www.youtube.com/watch?v=ndBGGMvXY4o" }, // Verified :contentReference[oaicite:9]{index=9}
-    { title: "Srivalli — Pushpa", url: "https://www.youtube.com/watch?v=txHO7PLGE3o" }, // Verified :contentReference[oaicite:10]{index=10}
-    { title: "Ramuloo Ramulaa — Ala Vaikunthapurramuloo", url: "https://www.youtube.com/watch?v=wFAj0pW6xX0" }, // Verified :contentReference[oaicite:11]{index=11}
-    { title: "Dhivara — Baahubali: The Beginning", url: "https://www.youtube.com/watch?v=F67EVY_sg4E" }, // Verified :contentReference[oaicite:12]{index=12}
-    { title: "Chinuku Taake — Pelli Choopulu", url: "https://www.youtube.com/watch?v=LGQ-hkDfMaI" }, // Verified :contentReference[oaicite:13]{index=13}
-    { title: "Jai Ho Lakshmi Bomb — Jai Lava Kusa", url: "https://www.youtube.com/watch?v=uJaFWNndh3k" } // Verified via playlist :contentReference[oaicite:14]{index=14}
+    { title: "Whattey Beauty — Bheeshma", url: "https://www.youtube.com/watch?v=E9IsULRDrWA" },
+    { title: "Saami Saami — Pushpa", url: "https://www.youtube.com/watch?v=-ZAnN6groJw" },
+    { title: "Mind Block — Sarileru Neekevvaru", url: "https://www.youtube.com/watch?v=ndBGGMvXY4o" },
+    { title: "Srivalli — Pushpa", url: "https://www.youtube.com/watch?v=txHO7PLGE3o" },
+    { title: "Ramuloo Ramulaa — Ala Vaikunthapurramuloo", url: "https://www.youtube.com/watch?v=wFAj0pW6xX0" },
+    { title: "Dhivara — Baahubali: The Beginning", url: "https://www.youtube.com/watch?v=F67EVY_sg4E" },
+    { title: "Chinuku Taake — Pelli Choopulu", url: "https://www.youtube.com/watch?v=LGQ-hkDfMaI" },
+    { title: "Jai Ho Lakshmi Bomb — Jai Lava Kusa", url: "https://www.youtube.com/watch?v=uJaFWNndh3k" }
   ],
   sad: [
-    { title: "Priyathama Priyathama — Majili", url: "https://www.youtube.com/watch?v=hoAwfB0mjcE" }, // :contentReference[oaicite:15]{index=15}
-    { title: "Inkem Inkem Inkem Kaavaale — Geetha Govindam", url: "https://www.youtube.com/watch?v=qFYj1w69OZA" }, // :contentReference[oaicite:16]{index=16}
-    { title: "Vachindamma — Geetha Govindam", url: "https://www.youtube.com/watch?v=5qt-zA3uCUI" }, // :contentReference[oaicite:17]{index=17}
-    { title: "Nee Kannu Neeli Samudram — Uppena", url: "https://www.youtube.com/watch?v=0bIdIyAnoUA" }, // :contentReference[oaicite:18]{index=18}
-    { title: "Arere Yekkada — Nenu Local", url: "https://www.youtube.com/watch?v=OYoge96XpJY" }, // :contentReference[oaicite:19]{index=19}
-    { title: "Oke Oka Jeevitham — Mr. Nookayya", url: "https://www.youtube.com/watch?v=2fk1JcGVLbA" }, // :contentReference[oaicite:20]{index=20}
-    // Add 4 more sad songs of your choice...
+    { title: "Priyathama Priyathama — Majili", url: "https://www.youtube.com/watch?v=hoAwfB0mjcE" },
+    { title: "Inkem Inkem Inkem Kaavaale — Geetha Govindam", url: "https://www.youtube.com/watch?v=qFYj1w69OZA" },
+    { title: "Vachindamma — Geetha Govindam", url: "https://www.youtube.com/watch?v=5qt-zA3uCUI" },
+    { title: "Nee Kannu Neeli Samudram — Uppena", url: "https://www.youtube.com/watch?v=0bIdIyAnoUA" },
+    { title: "Arere Yekkada — Nenu Local", url: "https://www.youtube.com/watch?v=OYoge96XpJY" },
+    { title: "Oke Oka Jeevitham — Mr. Nookayya", url: "https://www.youtube.com/watch?v=2fk1JcGVLbA" }
   ],
-   romantic: [
+  romantic: [
     { title: "Samajavaragamana — Ala Vaikunthapurramuloo", url: "https://www.youtube.com/watch?v=9i7b4q8f1j0" },
     { title: "Neeli Neeli Aakasam — 30 Rojullo Preminchadam Ela", url: "https://www.youtube.com/watch?v=Ue5nYI7vGzU" },
     { title: "Inkem Inkem Inkem Kaavaale — Geetha Govindam", url: "https://www.youtube.com/watch?v=qFYj1w69OZA" },
@@ -84,8 +83,8 @@ const songs = {
     { title: "Tharali Raada — Arjun Reddy", url: "https://www.youtube.com/watch?v=6m8bJ3p2lqA" },
     { title: "Em Sandeham Ledu — O Pitta Katha", url: "https://www.youtube.com/watch?v=0z9Sg9w0Brc" },
     { title: "Srivalli — Pushpa", url: "https://www.youtube.com/watch?v=txHO7PLGE3o" }
-],
-energetic: [
+  ],
+  energetic: [
     { title: "Jai Ho — Baahubali Theme Mix", url: "https://www.youtube.com/watch?v=3hS9dY0f6sU" },
     { title: "Blockbuster — Sarrainodu", url: "https://www.youtube.com/watch?v=R5e1b0z3G7Y" },
     { title: "Seeti Maar — DJ", url: "https://www.youtube.com/watch?v=NxGzC9B2-1U" },
@@ -96,13 +95,15 @@ energetic: [
     { title: "Reddy Ikkada Soodu — Narappa", url: "https://www.youtube.com/watch?v=5H4QeQj2lWw" },
     { title: "Bad Boys — Saaho", url: "https://www.youtube.com/watch?v=E3s7i9u2G2g" },
     { title: "Jigelu Rani — Rangasthalam", url: "https://www.youtube.com/watch?v=ZcJtKxna44c" }
-]
+  ]
 };
 
-// Attach event listeners
+const MOOD_CLASSES = ["happy", "sad", "romantic", "energetic"];
 document.querySelectorAll('#moods button').forEach(btn => {
   btn.addEventListener('click', () => {
     const mood = btn.getAttribute('data-mood');
+    document.body.classList.remove(...MOOD_CLASSES);
+    document.body.classList.add(mood);
     renderList(mood);
     suggestRandom(mood);
   });
